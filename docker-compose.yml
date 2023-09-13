@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  db:
+    container_name: postgressql_1
+    image: postgres
+    ports:
+      - '5433:5432'
+    volumes:
+      - data:/data/db
+    environment:
+      - POSTGRES_DB= testDb
+      - POSTGRES_PASSWORD=P@ssW0rd!
+      - POSTGRES_USER= root
+volumes:
+  data: {}
